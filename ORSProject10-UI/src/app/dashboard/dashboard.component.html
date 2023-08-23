@@ -1,0 +1,184 @@
+<!-- <app-navbar></app-navbar>
+<div>
+    <p class="text-info font-weight-bold" style="padding-left: 30%; font-size: 70px;">WELCOME TO ORS</p>
+
+    <div style="background-image: url(../../assets/files/IndexView.png); 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: 100%;
+        padding-bottom:18%;
+        padding-top: 5%;
+        ">
+        <p class="text-white font-weight-bold" style="padding-top: 10%; padding-left: 25%; font-size: 20px;">.</p>
+    </div>
+</div>
+<app-footer></app-footer> -->
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+  }
+
+  .container {
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+  }
+
+  .sun {
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+    animation: orbit 20.5s linear infinite;
+  }
+
+  .earth,
+  .moon,
+  .mercury {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent;
+    border-width: 0.3em 0.3em 0 0;
+    border-radius: 90%;
+  }
+
+  .earth {
+    top: 5em;
+    left: 5em;
+    width: 31em;
+    height: 31em;
+    animation: orbit 10.5s linear infinite;
+  }
+
+
+  .moon {
+    top: 1em;
+    right: 1em;
+    width: 8em;
+    height: 8em;
+    animation: orbit 3.3s linear infinite;
+  }
+
+  .mercury {
+    top: 5em;
+    left: 5em;
+    width: 20em;
+    height: 20em;
+    animation: orbit 7.5s linear infinite;
+  }
+
+  .mercury::before,
+  .earth::before,
+  .moon::before,
+  .venus::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .mercury::before {
+    top: 1.6em;
+    right: 1.6em;
+    width: 3.5em;
+    height: 3.5em;
+    background-color: red;
+    box-shadow: 0 0 3em white;
+  }
+
+  .earth::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 4em;
+    height: 4em;
+    background-color: aqua;
+    box-shadow: 0 0 3em white;
+  }
+
+  .moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: silver;
+    box-shadow: 0 0 3em white;
+  }
+
+  .venus::before {
+    top: 21em;
+    right: 31em;
+    width: 5em;
+    height: 5em;
+    background-color: rgb(6, 133, 27);
+    box-shadow: 0 0 3em white;
+  }
+  
+
+
+  @keyframes orbit {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* body{
+  
+  background-image: url('<%=ORSView.APP_CONTEXT%>/files/31.jpg');
+      background-size: 100%;
+  
+  
+  } */
+
+  .cl {
+    font-family: Monotype Corsiva;
+
+    /*  font-family: Monotype Corsiva;
+    
+   font-family: Footlight MT Light; */
+  }
+  
+
+</style>
+<app-navbar></app-navbar>
+
+
+<!-- <div class="img-fluid" style="background-image: url(../../assets/files/welcomeView2.png); 
+      -webkit-background-size: cover;
+  r    -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: 100%;
+      padding-bottom:18%;
+      padding-top: 5%;
+      ">
+      <p class="text-white font-weight-bold" style="padding-top: 10%; padding-left: 25%; font-size: 20px;">.</p>
+  </div> -->
+
+
+
+<body>
+  <p class="text-white font-weight-bold" style="padding-left: 25%; font-size: 60px;font-stretch: extra-expanded;font-style: italic;">{{'WELCOME TO ORS'|translate}}</p>
+  <div class="container">
+    <div class="sun"></div>
+    <div class="earth">
+      <div class="moon"></div>
+      <div class="mercury"></div>
+      
+    
+    </div>
+  </div>
+  
+</body>
+
+<app-footer></app-footer>
